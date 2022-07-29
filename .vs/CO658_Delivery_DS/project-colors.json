@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a36e93e0-af6b-41cd-8f71-1a6019d02c20": {
+      "ProjectGuid": "a36e93e0-af6b-41cd-8f71-1a6019d02c20",
+      "DisplayName": "CO658_Delivery_DS",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
