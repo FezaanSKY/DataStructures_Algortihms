@@ -7,7 +7,7 @@ using namespace std;
 
 #define EXIT "EXIT"
 
-//display menu to customer
+//Display menu to customer
 int menu()
 {
 	int choice;
@@ -35,11 +35,11 @@ void fInsert(StringHashTable* hashTable)
 
 	cout << "Enter Item Name: ";
 	cin >> item;
-	// Asks the user to input delivery option / Standard, Express, Premiumn
+	// Asks the user to input delivery option / Standard, Express, Premium
 	string d;
 	cout << "Standard\n";
 	cout << "Express\n";
-	cout << "Premiumn\n";
+	cout << "Premium\n";
 	cout << "Enter Delivery option : ";
 	cin >> d;
 	// Asks the user to input delivery Status, Ordered, Dispatched & Delivered
@@ -79,13 +79,13 @@ ItemOrder* FindCustomer(StringHashTable* hashTable)
 	objToFind = hashTable->Find(searchQuery);
 	if (objToFind && objToFind->name == searchQuery) {
 
-		// If the customer name they entered was found, display the follwing success message
+		// If the customer name they entered was found, display the following success message
 		cout << "\nFound name '" << searchQuery << "'!" << endl;
 		cout << objToFind->Display() << endl;
 		return objToFind;
 	}
 	else {
-		// If the name they entered could not be found, display the follwing error message
+		// If the name they entered could not be found, display the following error message
 		cout << "\nname '" << searchQuery << "' not found." << endl;
 		return NULL;
 	}
@@ -109,7 +109,7 @@ void UpdateOrder(StringHashTable* hashTable)
 
 
 
-	// Currently it finds the Item and then updates from list 
+	// Currently it finds the item and then updates from list 
 	if (orderToUpdate) {
 		orderToUpdate->status = newStatus;
 		cout << "\n***************************************\n" << endl;
@@ -131,7 +131,7 @@ void RemoveOrder(StringHashTable* hashTable)
 		return;
 	}
 
-	// Currently it finds the Item and then removes from list upon user confirmation
+	// Currently it finds the item and then removes from list upon user confirmation
 	if (orderToRemove) {
 		cout << "\nAre you sure you want to delete this order ? Y/N : ";
 		char answer;
@@ -172,8 +172,10 @@ int main() {
 		///serach or complete task
 		else if (choice == 3)
 			FindCustomer(deliveryTrack);
+		// Update order
 		else if (choice == 4)
 			UpdateOrder(deliveryTrack);
+		// Remove order
 		else if (choice == 5)
 			RemoveOrder(deliveryTrack);
 		// Exit Application
